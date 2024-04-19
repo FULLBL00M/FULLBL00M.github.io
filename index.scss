@@ -1,0 +1,53 @@
+$background-color: #222222;
+$text-color: #ffffff;
+
+body {
+    background-color: $background-color !important;
+    color: $text-color !important;
+}
+
+// Source: about.scss
+.test {
+    content: '';
+}
+.thenext {
+    background-color: red;
+}
+.whynot {
+    color: blue;
+}
+.heyhey {
+    background-color: yellow;
+}
+// EndSource: about.scss
+
+
+// Source: contact.scss
+.another {
+    color: white;
+}
+.yoyo {
+    color: blue;
+}
+// EndSource: contact.scss
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

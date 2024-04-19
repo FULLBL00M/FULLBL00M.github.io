@@ -5,10 +5,9 @@ I am going to be doing some heavy development here that will potentially get wor
 ## Table of Contents
 
 - [About](#about)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Dependencies](#dependencies)
+- [Dev-scripts](#dev-scripts)
+- [Todo](#todo)
 
 ## About
 
@@ -17,8 +16,32 @@ PUG -> HTML<br>
 SCSS -> CSS<br>
 JS -> JS<br>
 
-## Installation
+## Dependencies
 
-There is are no installation instructions. You just push to the repo and the site works. Isn't that nice. Now you have more time to worry about the end of the modern world.
+```
+npm install -g node-sass
+npm install -g pug
+```
 
+## Dev-scripts
+Currently all scss is compiled into the index.css stylesheet. I don't know if I will keep it this way but it was fun to make.
+
+Build on Windows
+```
+cd dev
+.\build.ps1
+```
+Open the browser for testing
+```
+cd dev
+.\testpage.ps1
+```
+Create a new page automatically
+```
+cd dev
+.\newpage.ps1
+```
+
+## Todo
+- Make a script that automatically fixes the nav links in the header
 
