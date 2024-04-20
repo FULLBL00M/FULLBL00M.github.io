@@ -34,7 +34,8 @@ cd dev
 Open the browser for testing
 ```
 cd dev
-.\testpage.ps1
+.\testlocalsite.ps1
+.\testlivesite.ps1
 ```
 Create a new page automatically
 ```
@@ -44,4 +45,5 @@ cd dev
 
 ## Todo
 - Make a script that automatically fixes the nav links in the header
+- Make a 
 

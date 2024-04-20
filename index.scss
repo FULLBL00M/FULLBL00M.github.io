@@ -1,35 +1,384 @@
-$background-color: #222222;
+$background-color: #131721;
 $text-color: #ffffff;
+$dark-accent-color: #0b0e14;
+$border-color: #000000;
+
+html, body {
+    height: 100%;
+    //overflow: scroll;
+}
 
 body {
     background-color: $background-color !important;
     color: $text-color !important;
+    display: flex;
+    flex-direction: column;
 }
 
+main {
+    padding-top: 15px;
+    flex: 1 0 auto;
+}
+
+.nav-link {
+    color: $text-color;
+}
+
+.loading-splash {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: $background-color;
+    font-size: 44px;
+}
+
+.loading-splash:before {
+    position: fixed;
+    content: 'loading...';
+    color: $text-color;
+    top: 40vh; 
+    left: 0; 
+    right: 0;
+}
+
+.card {
+    border: 1px solid $border-color;
+    background-color: lighten($background-color, 5%);
+    color: white;
+}
+
+header, footer, .card-header, .card-footer {
+    background-color: $dark-accent-color;
+}
+
+footer {
+    flex-shrink: 0;
+    border-top: 1px solid $border-color;
+
+    > * {
+        margin: 0;
+    }
+}
+
+// Stars
+// Define a custom random function to generate random values
+@function random-value($min, $max) {
+    @return random($max - $min) + $min;
+}
+  
+// Mixin to generate random box shadow
+@mixin random-box-shadow($count, $size) {
+    $shadows: ();
+    @for $i from 1 through $count {
+        $x: random-value(0, 100);
+        $y: random-value(0, 100);
+        $color: white;
+        $shadows: append($shadows, #{$x}vw #{$y}vh #{$size}px $color, comma);
+    }
+    box-shadow: $shadows;
+}
+  
+  // Generate box shadows for stars of different sizes
+#stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    animation: animStar 50s linear infinite;
+    @include random-box-shadow(700, 1);
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 100vh;
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        @include random-box-shadow(700, 1);
+    }
+}
+  
+#stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    animation: animStar 100s linear infinite;
+    @include random-box-shadow(200, 2);
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 100vh;
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        @include random-box-shadow(200, 2);
+    }
+}
+  
+#stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    animation: animStar 150s linear infinite;
+    @include random-box-shadow(100, 3);
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 100vh;
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        @include random-box-shadow(100, 3);
+    }
+}
+
+  
+  
+// Define keyframes for the animStar animation
+@keyframes animStar {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}
+  
+  
+
+
 // Source: about.scss
-.test {
-    content: '';
-}
-.thenext {
-    background-color: red;
-}
-.whynot {
-    color: blue;
-}
-.heyhey {
-    background-color: yellow;
-}
+
 // EndSource: about.scss
 
 
 // Source: contact.scss
-.another {
-    color: white;
-}
-.yoyo {
-    color: blue;
-}
+
 // EndSource: contact.scss
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
