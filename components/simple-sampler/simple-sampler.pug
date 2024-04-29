@@ -23,7 +23,7 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
                             input(class=`${component_id_tag}` type="range" min="0" max="4" step="1" value="1")
                             | 4x
                         label
-                            input(type="checkbox" checked)
+                            input(class=`${component_id_tag}` type="checkbox" checked)
                             | Preserve pitch
 
     script(type="module").
