@@ -15,6 +15,7 @@ html(lang="en")
           .col-12
             h1.p-5.text-center
               | I CAN BUILD ANYTHING WITH ANYTHING.<br>
+              | Number of pushes today: 3
         include components/simple-sampler/simple-sampler
         +simple-sampler({
             artist_name: "Bonobo", 
@@ -27,8 +28,8 @@ html(lang="en")
     +footer
     .loading-splash.d-none
 
-    script(type="module").
-        import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js'
+    //- script(type="module").
+    //-     import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js'
 
         //- #stars
         //- #stars2

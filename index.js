@@ -1,25 +1,28 @@
+// main.js (or equivalent entry point of your application)
+import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js';
+
 // Function to calculate and set the height of the main element
-function setMainHeight() {
-    const headerHeight = getHeaderHeight();
-    const footerHeight = getFooterHeight();
-    const availableHeight = window.innerHeight - headerHeight - footerHeight;
-    const mainElement = document.querySelector('main');
-    if (mainElement) {
-        mainElement.style.height = `${availableHeight}px`;
-    }
-}
+// function setMainHeight() {
+//     const headerHeight = getHeaderHeight();
+//     const footerHeight = getFooterHeight();
+//     const availableHeight = window.innerHeight - headerHeight - footerHeight;
+//     const mainElement = document.querySelector('main');
+//     if (mainElement) {
+//         mainElement.style.height = `${availableHeight}px`;
+//     }
+// }
 
-// Function to get the height of the header element
-function getHeaderHeight() {
-    const header = document.querySelector('header');
-    return header ? header.getBoundingClientRect().height : 0;
-}
+// // Function to get the height of the header element
+// function getHeaderHeight() {
+//     const header = document.querySelector('header');
+//     return header ? header.getBoundingClientRect().height : 0;
+// }
 
-// Function to get the height of the footer element
-function getFooterHeight() {
-    const footer = document.querySelector('footer');
-    return footer ? footer.getBoundingClientRect().height : 0;
-}
+// // Function to get the height of the footer element
+// function getFooterHeight() {
+//     const footer = document.querySelector('footer');
+//     return footer ? footer.getBoundingClientRect().height : 0;
+// }
 
 // Call the setMainHeight function when the page loads or when the window is resized
 // window.addEventListener('load', setMainHeight);
