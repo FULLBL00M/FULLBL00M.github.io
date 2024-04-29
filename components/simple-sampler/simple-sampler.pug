@@ -9,10 +9,10 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
                 .card-header 
                     p.m-0 #{artist_name} - #{album_name} - #{file_name}
                 .card-body
-                    div(class=`#{component_id_tag}`)
+                    div(class=`${component_id_tag}`)
                 .card-footer 
                     div(style="display: flex; justify-content: space-around; align-items: center;")
-                        button(class=`btn btn-primary #{component_id_tag}`)
+                        button(class=`btn btn-primary ${component_id_tag}`)
                             | ▷&#10074;&#10074;
                         label
                             | Playback rate:&nbsp;
@@ -20,7 +20,7 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
                             | x
                         label
                             | 0.25x
-                            input(class=`#{component_id_tag}` type="range" min="0" max="4" step="1" value="1")
+                            input(class=`${component_id_tag}` type="range" min="0" max="4" step="1" value="1")
                             | 4x
                         label
                             input(type="checkbox" checked)
@@ -28,13 +28,14 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
 
     script(type="module").
         // main.js (or equivalent entry point of your application)
-        import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js';
+        import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
         // YouTube video ID
-        const audioUrl = `#{audio_url}`;
+        const audioUrl = "#{audio_url}";
+        const componentIdTagDiv = "div.#{component_id_tag}";
 
         // Create the WaveSurfer instance
         const wavesurfer = WaveSurfer.create({
-            container: `div.#{component_id_tag}`,
+            container: componentIdTagDiv,
             waveColor: '#ffffff',
             progressColor: '#000000',
             cursorColor: '#000000',
