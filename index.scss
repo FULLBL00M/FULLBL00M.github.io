@@ -5,7 +5,6 @@ $border-color: #000000;
 
 html, body {
     height: 100%;
-    //overflow: scroll;
 }
 
 body {
@@ -52,6 +51,10 @@ main {
 
 header, footer, .card-header, .card-footer {
     background-color: $dark-accent-color;
+}
+
+header {
+    border-bottom: 1px solid $border-color;
 }
 
 footer {
@@ -135,9 +138,7 @@ footer {
         @include random-box-shadow(100, 3);
     }
 }
-
-  
-  
+ 
 // Define keyframes for the animStar animation
 @keyframes animStar {
     from {
@@ -147,9 +148,6 @@ footer {
         transform: translateY(-100vh);
     }
 }
-  
-  
-
 
 // Source: about.scss
 
@@ -159,6 +157,12 @@ footer {
 // Source: contact.scss
 
 // EndSource: contact.scss
+
+
+
+
+
+
 
 
 
