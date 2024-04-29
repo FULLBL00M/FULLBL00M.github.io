@@ -9,7 +9,7 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
                 .card-header 
                     p.m-0 #{artist_name} - #{album_name} - #{file_name}
                 .card-body
-                    div(class=`${component_id_tag}`)
+                    div(class=`#{component_id_tag}`)
                 .card-footer 
                     div(style="display: flex; justify-content: space-around; align-items: center;")
                         button(class=`btn btn-primary ${component_id_tag}`)
@@ -20,7 +20,7 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
                             | x
                         label
                             | 0.25x
-                            input(class=`${component_id_tag}` type="range" min="0" max="4" step="1" value="1")
+                            input(class=`#{component_id_tag}` type="range" min="0" max="4" step="1" value="1")
                             | 4x
                         label
                             input(type="checkbox" checked)
@@ -34,7 +34,7 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
 
         // Create the WaveSurfer instance
         const wavesurfer = WaveSurfer.create({
-            container: `.${component_id_tag}`,
+            container: `.#{component_id_tag}`,
             waveColor: '#ffffff',
             progressColor: '#000000',
             cursorColor: '#000000',
@@ -52,13 +52,13 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
         const speeds = [0.25, 0.5, 1, 2, 4];
 
         // Toggle pitch preservation
-        document.querySelector(`input[type="checkbox"].${component_id_tag}`).addEventListener('change', (e) => {
+        document.querySelector(`input[type="checkbox"].#{component_id_tag}`).addEventListener('change', (e) => {
             preservePitch = e.target.checked;
             wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
         });
 
         // Set the playback rate
-        document.querySelector(`input[type="range"].${component_id_tag}`).addEventListener('input', (e) => {
+        document.querySelector(`input[type="range"].#{component_id_tag}`).addEventListener('input', (e) => {
             const speed = speeds[e.target.valueAsNumber];
             document.querySelector('#rate').textContent = speed.toFixed(2);
             wavesurfer.setPlaybackRate(speed, preservePitch);
@@ -66,7 +66,7 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
         });
 
         // Play/pause
-        document.querySelector(`.btn-primary.${component_id_tag}`).addEventListener('click', () => {
+        document.querySelector(`.btn-primary.#{component_id_tag}`).addEventListener('click', () => {
             wavesurfer.playPause();
         });
 
