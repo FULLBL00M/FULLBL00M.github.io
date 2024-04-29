@@ -15,13 +15,19 @@ html(lang="en")
           .col-12
             h1.p-5.text-center
               | I CAN BUILD ANYTHING WITH ANYTHING.<br>
-              | Number of pushes today: 15
+              | Number of pushes today: 16
         include components/simple-sampler/simple-sampler
         +simple-sampler({
             artist_name: "Bonobo", 
             album_name: "Black Sands", 
             file_name: "01 - Prelude.mp3", 
             audio_url: "./media/audio/Bonobo%20-%20Black%20Sands/01%20-%20Prelude.mp3"
+        })
+        +simple-sampler({
+            artist_name: "Bonobo", 
+            album_name: "Black Sands", 
+            file_name: "02 - Kiara.mp3", 
+            audio_url: "./media/audio/Bonobo%20-%20Black%20Sands/02%20-%20Kiara.mp3"
         })
 
     include components/footer/footer
