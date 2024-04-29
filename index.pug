@@ -28,14 +28,14 @@ html(lang="en")
 
                             label
                                 | Playback rate:&nbsp;
-                                span#rate 2.00
+                                span#rate 1.00
                                 | x
 
                             label
-                                | 0.25x
-                                input(type="range" min="0" max="4" step="1" value="2")
+                                | 0.10x
+                                input(type="range" min="0.00" max="4.00" step="0.1" value="1.00")
 
-                                | 4x
+                                | 4.00x
 
                             label
                                 input(type="checkbox" checked)
@@ -70,7 +70,14 @@ html(lang="en")
         });
 
         let preservePitch = true;
-        const speeds = [0.25, 0.5, 1, 2, 4];
+        
+        var speeds = [];
+        var x = 0;
+        while (x <= 4) {
+            x = x + 0.1;
+            speed.push(x);
+        }
+        console.log(speeds);
 
         // Toggle pitch preservation
         document.querySelector('input[type="checkbox"]').addEventListener('change', (e) => {
