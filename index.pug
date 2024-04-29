@@ -21,6 +21,25 @@ html(lang="en")
                 .card 
                     .card-body 
                         #waveform
+                    .card-footer 
+                        div(style="display: flex; justify-content: space-around; align-items: center;")
+                            button.btn.btn-primary
+                                | Play/pause
+
+                            label
+                                | Playback rate:&nbsp;
+                                span#rate 2.00
+                                | x
+
+                            label
+                                | 0.25x
+                                input(type="range" min="0" max="4" step="1" value="2")
+
+                                | 4x
+
+                            label
+                                input(type="checkbox" checked)
+                                | Preserve pitch
 
         include components/four-two-one-cards/four-two-one-cards
         +four-two-one-cards
@@ -42,11 +61,35 @@ html(lang="en")
             cursorColor: '#000000',
             cursorWidth: 1,
             barWidth: 1,
-            barHeight: 0.6,
+            barHeight: 1,
+            barGap: 1,
             dragToSeek: true,
             url: audioUrl,
             backend: 'MediaElementWebAudio',
+            audioRate: 1,
         });
+
+        let preservePitch = true;
+        const speeds = [0.25, 0.5, 1, 2, 4];
+
+        // Toggle pitch preservation
+        document.querySelector('input[type="checkbox"]').addEventListener('change', (e) => {
+            preservePitch = e.target.checked;
+            wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
+        })
+
+        // Set the playback rate
+        document.querySelector('input[type="range"]').addEventListener('input', (e) => {
+            const speed = speeds[e.target.valueAsNumber];
+            document.querySelector('#rate').textContent = speed.toFixed(2);
+            wavesurfer.setPlaybackRate(speed, preservePitch);
+            wavesurfer.play();
+        })
+
+        // Play/pause
+        document.querySelector('button').addEventListener('click', () => {
+            wavesurfer.playPause();
+        })
 
         wavesurfer.on('ready', () => {
             wavesurfer.play();
