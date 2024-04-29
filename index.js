@@ -1,5 +1,3 @@
-// main.js (or equivalent entry point of your application)
-import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js';
 
 // Function to calculate and set the height of the main element
 // function setMainHeight() {

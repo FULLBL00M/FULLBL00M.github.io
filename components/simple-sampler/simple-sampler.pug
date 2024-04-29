@@ -27,6 +27,8 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
                             | Preserve pitch
 
     script(type="module").
+        // main.js (or equivalent entry point of your application)
+        import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js';
         // YouTube video ID
         const audioUrl = `#{audio_url}`;
 
