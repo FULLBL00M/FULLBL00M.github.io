@@ -6,21 +6,24 @@ html(lang="en")
     script(src="https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.min.js")
 
   body
+    include components/header/header
+    +header
+
     main.container-fluid.p-0
-      include components/header/header
-      +header
       .container.pt-3
         .row
           .col-12
             h1.p-5.text-center
               | I CAN BUILD ANYTHING WITH ANYTHING.<br>
               | FUCKING TRY ME, ASSHOLE
+        .row 
+            .col-12 
+                .card 
+                    .card-body 
+                        #waveform
 
       include components/four-two-one-cards/four-two-one-cards
       +four-two-one-cards
-
-      #waveform
-        // the waveform will be rendered here
 
       script(type="module").
         import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js'
@@ -44,10 +47,9 @@ html(lang="en")
           wavesurfer.playPause();
         });
 
-      include components/footer/footer
-      +footer
-
-      .loading-splash.d-none
+    include components/footer/footer
+    +footer
+    .loading-splash.d-none
         //- #stars
         //- #stars2
         //- #stars3
