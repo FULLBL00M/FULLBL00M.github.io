@@ -1,4 +1,4 @@
-mixin simple-sampler({ artist_name, album_name, file_name, audio_url, progress_color })
+mixin simple-sampler({ artist_name, album_name, file_name, audio_url, accent_color })
     - const artistName = artist_name.replace(/\s+/g, '-').replace(/[^\w-]/g, '').toLowerCase();
     - const fileName = file_name.replace(/\s+/g, '-').replace(/[^\w-]/g, '').toLowerCase();
     - const component_id_tag = artistName + '_' + fileName;
@@ -33,14 +33,14 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url, progress_c
         // YouTube video ID
         const audioUrl = "#{audio_url}";
         const componentIdTagDiv = "div.#{component_id_tag}";
-        const progressColor = "#{progress_color}"
+        const accentColor = "#{accent_color}"
 
         // Create the WaveSurfer instance
         const wavesurfer = WaveSurfer.create({
             container: componentIdTagDiv,
             waveColor: '#ffffff',
-            progressColor: progressColor,
-            cursorColor: '#0d6efd',
+            progressColor: accentColor,
+            cursorColor: accentColor,
             cursorWidth: 1,
             barWidth: 1,
             barHeight: 1,
