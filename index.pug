@@ -20,7 +20,7 @@ html(lang="en")
             .col-12 
                 .card
                     .card-header 
-                        p Aphex Twin - Fingerbib.mp3
+                        p.m-0 Aphex Twin - Fingerbib.mp3
                     .card-body 
                         #waveform
                     .card-footer 
@@ -89,7 +89,7 @@ html(lang="en")
         })
 
         // Play/pause
-        document.querySelector('button').addEventListener('click', () => {
+        document.querySelector('.btn-primary').addEventListener('click', () => {
             wavesurfer.playPause();
         })
 
