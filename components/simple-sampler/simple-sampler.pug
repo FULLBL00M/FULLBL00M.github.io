@@ -1,0 +1,79 @@
+mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
+    .row.pb-3
+        .col-12 
+            .card
+                .card-header 
+                    p.m-0 #{artist_name} - #{album_name} - #{file_name}
+                .card-body
+                    - const artistName = `#{artist_name}`;
+                    - const fileName = `#{file_name}`;
+                    - const sanitized_artist_name = artistName.replace(/\s+/g, '-').replace(/[^\w-]/g, '').toLowerCase();
+                    - const sanitized_file_name = fileName.replace(/\s+/g, '-').replace(/[^\w-]/g, '').toLowerCase();
+                    - const component_id_tag = `${sanitized_artist_name}-${sanitized_file_name}`;
+                    div(class=`${component_id_tag}`)
+                .card-footer 
+                    div(style="display: flex; justify-content: space-around; align-items: center;")
+                        button(class=`btn btn-primary ${component_id_tag}`)
+                            | ▷&#10074;&#10074;
+                        label
+                            | Playback rate:&nbsp;
+                            span#rate 1.00
+                            | x
+                        label
+                            | 0.25x
+                            input(class=`${component_id_tag}` type="range" min="0" max="4" step="1" value="1")
+                            | 4x
+                        label
+                            input(type="checkbox" checked)
+                            | Preserve pitch
+
+    script(type="module").
+
+        // YouTube video ID
+        const audioUrl = `#{audio_url}`;
+
+        // Create the WaveSurfer instance
+        const wavesurfer = WaveSurfer.create({
+            container: `.${component_id_tag}`,
+            waveColor: '#ffffff',
+            progressColor: '#000000',
+            cursorColor: '#000000',
+            cursorWidth: 1,
+            barWidth: 1,
+            barHeight: 1,
+            barGap: 1,
+            dragToSeek: true,
+            url: audioUrl,
+            backend: 'MediaElementWebAudio',
+            audioRate: 1,
+        });
+
+        let preservePitch = true;
+        const speeds = [0.25, 0.5, 1, 2, 4];
+
+        // Toggle pitch preservation
+        document.querySelector(`input[type="checkbox"].${component_id_tag}`).addEventListener('change', (e) => {
+            preservePitch = e.target.checked;
+            wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
+        })
+
+        // Set the playback rate
+        document.querySelector(`input[type="range"].${component_id_tag}`).addEventListener('input', (e) => {
+            const speed = speeds[e.target.valueAsNumber];
+            document.querySelector('#rate').textContent = speed.toFixed(2);
+            wavesurfer.setPlaybackRate(speed, preservePitch);
+            wavesurfer.play();
+        })
+
+        // Play/pause
+        document.querySelector(`.btn-primary.${component_id_tag}`).addEventListener('click', () => {
+            wavesurfer.playPause();
+        })
+
+        wavesurfer.on('ready', () => {
+            wavesurfer.play();
+        });
+
+        wavesurfer.on('interaction', () => {
+            wavesurfer.playPause();
+        });
