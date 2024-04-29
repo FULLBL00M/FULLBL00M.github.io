@@ -1,7 +1,7 @@
 mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
     - const artistName = artist_name.replace(/\s+/g, '-').replace(/[^\w-]/g, '').toLowerCase();
     - const fileName = file_name.replace(/\s+/g, '-').replace(/[^\w-]/g, '').toLowerCase();
-    - const component_id_tag = artistName + '-' + fileName;
+    - const component_id_tag = artistName + '_' + fileName;
 
     .row.pb-3
         .col-12 
