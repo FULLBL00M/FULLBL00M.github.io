@@ -14,20 +14,19 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
                     div(style="display: flex; justify-content: space-around; align-items: center;")
                         button(class=`btn btn-primary ${component_id_tag}`)
                             | ▷&#10074;&#10074;
-                        label
-                            | Playback rate:&nbsp;
-                            span#rate 1.00
-                            | x
-                        label
-                            | 0.25x
-                            input(class=`${component_id_tag}` type="range" min="0" max="4" step="1" value="1")
-                            | 4x
-                        label
-                            input(class=`${component_id_tag}` type="checkbox" checked)
-                            | Preserve pitch
+                        //- label
+                        //-     | Playback rate:&nbsp;
+                        //-     span#rate 1.00
+                        //-     | x
+                        //- label
+                        //-     | 0.25x
+                        //-     input(class=`${component_id_tag}` type="range" min="0" max="4" step="1" value="1")
+                        //-     | 4x
+                        //- label
+                        //-     input(class=`${component_id_tag}` type="checkbox" checked)
+                        //-     | Preserve pitch
 
     script(type="module").
-        // main.js (or equivalent entry point of your application)
         import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
         // YouTube video ID
         const audioUrl = "#{audio_url}";
