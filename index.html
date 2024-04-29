@@ -99,4 +99,504 @@ wavesurfer.on('ready', () => {
 
 wavesurfer.on('interaction', () => {
     wavesurfer.playPause();
+});</script><div class="row pb-3"><div class="col-12"> <div class="card"><div class="card-header"> <p class="m-0">Bonobo - Black Sands - 03 - Kong.mp3</p></div><div class="card-body"><div class="bonobo_03---kongmp3"></div></div><div class="card-footer"> <div style="display: flex; justify-content: space-around; align-items: center;"><button class="btn btn-primary bonobo_03---kongmp3">▷&#10074;&#10074;</button><label>Playback rate:&nbsp;<span id="rate">1.00</span>x</label><label>0.25x<input class="bonobo_03---kongmp3" type="range" min="0" max="4" step="1" value="1">4x</label><label><input class="bonobo_03---kongmp3" type="checkbox" checked>Preserve pitch</label></div></div></div></div></div><script type="module">// main.js (or equivalent entry point of your application)
+import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
+// YouTube video ID
+const audioUrl = "./media/audio/Bonobo%20-%20Black%20Sands/03%20-%20Kong.mp3";
+const componentIdTagDiv = "div.bonobo_03---kongmp3";
+
+// Create the WaveSurfer instance
+const wavesurfer = WaveSurfer.create({
+    container: componentIdTagDiv,
+    waveColor: '#ffffff',
+    progressColor: '#000000',
+    cursorColor: '#000000',
+    cursorWidth: 1,
+    barWidth: 1,
+    barHeight: 1,
+    barGap: 1,
+    dragToSeek: true,
+    url: audioUrl,
+    backend: 'MediaElementWebAudio',
+    audioRate: 1,
+});
+
+let preservePitch = true;
+const speeds = [0.25, 0.5, 1, 2, 4];
+
+// Toggle pitch preservation
+document.querySelector('input[type="checkbox"].bonobo_03---kongmp3').addEventListener('change', (e) => {
+    preservePitch = e.target.checked;
+    wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
+});
+
+// Set the playback rate
+document.querySelector('input[type="range"].bonobo_03---kongmp3').addEventListener('input', (e) => {
+    const speed = speeds[e.target.valueAsNumber];
+    document.querySelector('#rate').textContent = speed.toFixed(2);
+    wavesurfer.setPlaybackRate(speed, preservePitch);
+    wavesurfer.play();
+});
+
+// Play/pause
+document.querySelector('.btn-primary.bonobo_03---kongmp3').addEventListener('click', () => {
+    wavesurfer.playPause();
+});
+
+wavesurfer.on('ready', () => {
+    wavesurfer.play();
+});
+
+wavesurfer.on('interaction', () => {
+    wavesurfer.playPause();
+});</script><div class="row pb-3"><div class="col-12"> <div class="card"><div class="card-header"> <p class="m-0">Bonobo - Black Sands - 04 - Eyesdown ft Anderya Triana.mp3</p></div><div class="card-body"><div class="bonobo_04---eyesdown-ft-anderya-trianamp3"></div></div><div class="card-footer"> <div style="display: flex; justify-content: space-around; align-items: center;"><button class="btn btn-primary bonobo_04---eyesdown-ft-anderya-trianamp3">▷&#10074;&#10074;</button><label>Playback rate:&nbsp;<span id="rate">1.00</span>x</label><label>0.25x<input class="bonobo_04---eyesdown-ft-anderya-trianamp3" type="range" min="0" max="4" step="1" value="1">4x</label><label><input class="bonobo_04---eyesdown-ft-anderya-trianamp3" type="checkbox" checked>Preserve pitch</label></div></div></div></div></div><script type="module">// main.js (or equivalent entry point of your application)
+import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
+// YouTube video ID
+const audioUrl = "./media/audio/Bonobo%20-%20Black%20Sands/04%20-%20Eyesdown%20ft%20Anderya%20Triana.mp3";
+const componentIdTagDiv = "div.bonobo_04---eyesdown-ft-anderya-trianamp3";
+
+// Create the WaveSurfer instance
+const wavesurfer = WaveSurfer.create({
+    container: componentIdTagDiv,
+    waveColor: '#ffffff',
+    progressColor: '#000000',
+    cursorColor: '#000000',
+    cursorWidth: 1,
+    barWidth: 1,
+    barHeight: 1,
+    barGap: 1,
+    dragToSeek: true,
+    url: audioUrl,
+    backend: 'MediaElementWebAudio',
+    audioRate: 1,
+});
+
+let preservePitch = true;
+const speeds = [0.25, 0.5, 1, 2, 4];
+
+// Toggle pitch preservation
+document.querySelector('input[type="checkbox"].bonobo_04---eyesdown-ft-anderya-trianamp3').addEventListener('change', (e) => {
+    preservePitch = e.target.checked;
+    wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
+});
+
+// Set the playback rate
+document.querySelector('input[type="range"].bonobo_04---eyesdown-ft-anderya-trianamp3').addEventListener('input', (e) => {
+    const speed = speeds[e.target.valueAsNumber];
+    document.querySelector('#rate').textContent = speed.toFixed(2);
+    wavesurfer.setPlaybackRate(speed, preservePitch);
+    wavesurfer.play();
+});
+
+// Play/pause
+document.querySelector('.btn-primary.bonobo_04---eyesdown-ft-anderya-trianamp3').addEventListener('click', () => {
+    wavesurfer.playPause();
+});
+
+wavesurfer.on('ready', () => {
+    wavesurfer.play();
+});
+
+wavesurfer.on('interaction', () => {
+    wavesurfer.playPause();
+});</script><div class="row pb-3"><div class="col-12"> <div class="card"><div class="card-header"> <p class="m-0">Bonobo - Black Sands - 05 - El Toro.mp3</p></div><div class="card-body"><div class="bonobo_05---el-toromp3"></div></div><div class="card-footer"> <div style="display: flex; justify-content: space-around; align-items: center;"><button class="btn btn-primary bonobo_05---el-toromp3">▷&#10074;&#10074;</button><label>Playback rate:&nbsp;<span id="rate">1.00</span>x</label><label>0.25x<input class="bonobo_05---el-toromp3" type="range" min="0" max="4" step="1" value="1">4x</label><label><input class="bonobo_05---el-toromp3" type="checkbox" checked>Preserve pitch</label></div></div></div></div></div><script type="module">// main.js (or equivalent entry point of your application)
+import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
+// YouTube video ID
+const audioUrl = "./media/audio/Bonobo%20-%20Black%20Sands/05%20-%20El%20Toro.mp3";
+const componentIdTagDiv = "div.bonobo_05---el-toromp3";
+
+// Create the WaveSurfer instance
+const wavesurfer = WaveSurfer.create({
+    container: componentIdTagDiv,
+    waveColor: '#ffffff',
+    progressColor: '#000000',
+    cursorColor: '#000000',
+    cursorWidth: 1,
+    barWidth: 1,
+    barHeight: 1,
+    barGap: 1,
+    dragToSeek: true,
+    url: audioUrl,
+    backend: 'MediaElementWebAudio',
+    audioRate: 1,
+});
+
+let preservePitch = true;
+const speeds = [0.25, 0.5, 1, 2, 4];
+
+// Toggle pitch preservation
+document.querySelector('input[type="checkbox"].bonobo_05---el-toromp3').addEventListener('change', (e) => {
+    preservePitch = e.target.checked;
+    wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
+});
+
+// Set the playback rate
+document.querySelector('input[type="range"].bonobo_05---el-toromp3').addEventListener('input', (e) => {
+    const speed = speeds[e.target.valueAsNumber];
+    document.querySelector('#rate').textContent = speed.toFixed(2);
+    wavesurfer.setPlaybackRate(speed, preservePitch);
+    wavesurfer.play();
+});
+
+// Play/pause
+document.querySelector('.btn-primary.bonobo_05---el-toromp3').addEventListener('click', () => {
+    wavesurfer.playPause();
+});
+
+wavesurfer.on('ready', () => {
+    wavesurfer.play();
+});
+
+wavesurfer.on('interaction', () => {
+    wavesurfer.playPause();
+});</script><div class="row pb-3"><div class="col-12"> <div class="card"><div class="card-header"> <p class="m-0">Bonobo - Black Sands - 06 - We Could Forever.mp3</p></div><div class="card-body"><div class="bonobo_06---we-could-forevermp3"></div></div><div class="card-footer"> <div style="display: flex; justify-content: space-around; align-items: center;"><button class="btn btn-primary bonobo_06---we-could-forevermp3">▷&#10074;&#10074;</button><label>Playback rate:&nbsp;<span id="rate">1.00</span>x</label><label>0.25x<input class="bonobo_06---we-could-forevermp3" type="range" min="0" max="4" step="1" value="1">4x</label><label><input class="bonobo_06---we-could-forevermp3" type="checkbox" checked>Preserve pitch</label></div></div></div></div></div><script type="module">// main.js (or equivalent entry point of your application)
+import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
+// YouTube video ID
+const audioUrl = "./media/audio/Bonobo%20-%20Black%20Sands/06%20-%20We%20Could%20Forever.mp3";
+const componentIdTagDiv = "div.bonobo_06---we-could-forevermp3";
+
+// Create the WaveSurfer instance
+const wavesurfer = WaveSurfer.create({
+    container: componentIdTagDiv,
+    waveColor: '#ffffff',
+    progressColor: '#000000',
+    cursorColor: '#000000',
+    cursorWidth: 1,
+    barWidth: 1,
+    barHeight: 1,
+    barGap: 1,
+    dragToSeek: true,
+    url: audioUrl,
+    backend: 'MediaElementWebAudio',
+    audioRate: 1,
+});
+
+let preservePitch = true;
+const speeds = [0.25, 0.5, 1, 2, 4];
+
+// Toggle pitch preservation
+document.querySelector('input[type="checkbox"].bonobo_06---we-could-forevermp3').addEventListener('change', (e) => {
+    preservePitch = e.target.checked;
+    wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
+});
+
+// Set the playback rate
+document.querySelector('input[type="range"].bonobo_06---we-could-forevermp3').addEventListener('input', (e) => {
+    const speed = speeds[e.target.valueAsNumber];
+    document.querySelector('#rate').textContent = speed.toFixed(2);
+    wavesurfer.setPlaybackRate(speed, preservePitch);
+    wavesurfer.play();
+});
+
+// Play/pause
+document.querySelector('.btn-primary.bonobo_06---we-could-forevermp3').addEventListener('click', () => {
+    wavesurfer.playPause();
+});
+
+wavesurfer.on('ready', () => {
+    wavesurfer.play();
+});
+
+wavesurfer.on('interaction', () => {
+    wavesurfer.playPause();
+});</script><div class="row pb-3"><div class="col-12"> <div class="card"><div class="card-header"> <p class="m-0">Bonobo - Black Sands - 07 - 1009.mp3</p></div><div class="card-body"><div class="bonobo_07---1009mp3"></div></div><div class="card-footer"> <div style="display: flex; justify-content: space-around; align-items: center;"><button class="btn btn-primary bonobo_07---1009mp3">▷&#10074;&#10074;</button><label>Playback rate:&nbsp;<span id="rate">1.00</span>x</label><label>0.25x<input class="bonobo_07---1009mp3" type="range" min="0" max="4" step="1" value="1">4x</label><label><input class="bonobo_07---1009mp3" type="checkbox" checked>Preserve pitch</label></div></div></div></div></div><script type="module">// main.js (or equivalent entry point of your application)
+import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
+// YouTube video ID
+const audioUrl = "./media/audio/Bonobo%20-%20Black%20Sands/07%20-%201009.mp3";
+const componentIdTagDiv = "div.bonobo_07---1009mp3";
+
+// Create the WaveSurfer instance
+const wavesurfer = WaveSurfer.create({
+    container: componentIdTagDiv,
+    waveColor: '#ffffff',
+    progressColor: '#000000',
+    cursorColor: '#000000',
+    cursorWidth: 1,
+    barWidth: 1,
+    barHeight: 1,
+    barGap: 1,
+    dragToSeek: true,
+    url: audioUrl,
+    backend: 'MediaElementWebAudio',
+    audioRate: 1,
+});
+
+let preservePitch = true;
+const speeds = [0.25, 0.5, 1, 2, 4];
+
+// Toggle pitch preservation
+document.querySelector('input[type="checkbox"].bonobo_07---1009mp3').addEventListener('change', (e) => {
+    preservePitch = e.target.checked;
+    wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
+});
+
+// Set the playback rate
+document.querySelector('input[type="range"].bonobo_07---1009mp3').addEventListener('input', (e) => {
+    const speed = speeds[e.target.valueAsNumber];
+    document.querySelector('#rate').textContent = speed.toFixed(2);
+    wavesurfer.setPlaybackRate(speed, preservePitch);
+    wavesurfer.play();
+});
+
+// Play/pause
+document.querySelector('.btn-primary.bonobo_07---1009mp3').addEventListener('click', () => {
+    wavesurfer.playPause();
+});
+
+wavesurfer.on('ready', () => {
+    wavesurfer.play();
+});
+
+wavesurfer.on('interaction', () => {
+    wavesurfer.playPause();
+});</script><div class="row pb-3"><div class="col-12"> <div class="card"><div class="card-header"> <p class="m-0">Bonobo - Black Sands - 08 - All in forms.mp3</p></div><div class="card-body"><div class="bonobo_08---all-in-formsmp3"></div></div><div class="card-footer"> <div style="display: flex; justify-content: space-around; align-items: center;"><button class="btn btn-primary bonobo_08---all-in-formsmp3">▷&#10074;&#10074;</button><label>Playback rate:&nbsp;<span id="rate">1.00</span>x</label><label>0.25x<input class="bonobo_08---all-in-formsmp3" type="range" min="0" max="4" step="1" value="1">4x</label><label><input class="bonobo_08---all-in-formsmp3" type="checkbox" checked>Preserve pitch</label></div></div></div></div></div><script type="module">// main.js (or equivalent entry point of your application)
+import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
+// YouTube video ID
+const audioUrl = "./media/audio/Bonobo%20-%20Black%20Sands/08%20-%20All%20in%20forms.mp3";
+const componentIdTagDiv = "div.bonobo_08---all-in-formsmp3";
+
+// Create the WaveSurfer instance
+const wavesurfer = WaveSurfer.create({
+    container: componentIdTagDiv,
+    waveColor: '#ffffff',
+    progressColor: '#000000',
+    cursorColor: '#000000',
+    cursorWidth: 1,
+    barWidth: 1,
+    barHeight: 1,
+    barGap: 1,
+    dragToSeek: true,
+    url: audioUrl,
+    backend: 'MediaElementWebAudio',
+    audioRate: 1,
+});
+
+let preservePitch = true;
+const speeds = [0.25, 0.5, 1, 2, 4];
+
+// Toggle pitch preservation
+document.querySelector('input[type="checkbox"].bonobo_08---all-in-formsmp3').addEventListener('change', (e) => {
+    preservePitch = e.target.checked;
+    wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
+});
+
+// Set the playback rate
+document.querySelector('input[type="range"].bonobo_08---all-in-formsmp3').addEventListener('input', (e) => {
+    const speed = speeds[e.target.valueAsNumber];
+    document.querySelector('#rate').textContent = speed.toFixed(2);
+    wavesurfer.setPlaybackRate(speed, preservePitch);
+    wavesurfer.play();
+});
+
+// Play/pause
+document.querySelector('.btn-primary.bonobo_08---all-in-formsmp3').addEventListener('click', () => {
+    wavesurfer.playPause();
+});
+
+wavesurfer.on('ready', () => {
+    wavesurfer.play();
+});
+
+wavesurfer.on('interaction', () => {
+    wavesurfer.playPause();
+});</script><div class="row pb-3"><div class="col-12"> <div class="card"><div class="card-header"> <p class="m-0">Bonobo - Black Sands - 09 - The Keeper ft. Andreya Triana.mp3</p></div><div class="card-body"><div class="bonobo_09---the-keeper-ft-andreya-trianamp3"></div></div><div class="card-footer"> <div style="display: flex; justify-content: space-around; align-items: center;"><button class="btn btn-primary bonobo_09---the-keeper-ft-andreya-trianamp3">▷&#10074;&#10074;</button><label>Playback rate:&nbsp;<span id="rate">1.00</span>x</label><label>0.25x<input class="bonobo_09---the-keeper-ft-andreya-trianamp3" type="range" min="0" max="4" step="1" value="1">4x</label><label><input class="bonobo_09---the-keeper-ft-andreya-trianamp3" type="checkbox" checked>Preserve pitch</label></div></div></div></div></div><script type="module">// main.js (or equivalent entry point of your application)
+import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
+// YouTube video ID
+const audioUrl = "./media/audio/Bonobo%20-%20Black%20Sands/09%20-%20The%20Keeper%20ft.%20Andreya%20Triana.mp3";
+const componentIdTagDiv = "div.bonobo_09---the-keeper-ft-andreya-trianamp3";
+
+// Create the WaveSurfer instance
+const wavesurfer = WaveSurfer.create({
+    container: componentIdTagDiv,
+    waveColor: '#ffffff',
+    progressColor: '#000000',
+    cursorColor: '#000000',
+    cursorWidth: 1,
+    barWidth: 1,
+    barHeight: 1,
+    barGap: 1,
+    dragToSeek: true,
+    url: audioUrl,
+    backend: 'MediaElementWebAudio',
+    audioRate: 1,
+});
+
+let preservePitch = true;
+const speeds = [0.25, 0.5, 1, 2, 4];
+
+// Toggle pitch preservation
+document.querySelector('input[type="checkbox"].bonobo_09---the-keeper-ft-andreya-trianamp3').addEventListener('change', (e) => {
+    preservePitch = e.target.checked;
+    wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
+});
+
+// Set the playback rate
+document.querySelector('input[type="range"].bonobo_09---the-keeper-ft-andreya-trianamp3').addEventListener('input', (e) => {
+    const speed = speeds[e.target.valueAsNumber];
+    document.querySelector('#rate').textContent = speed.toFixed(2);
+    wavesurfer.setPlaybackRate(speed, preservePitch);
+    wavesurfer.play();
+});
+
+// Play/pause
+document.querySelector('.btn-primary.bonobo_09---the-keeper-ft-andreya-trianamp3').addEventListener('click', () => {
+    wavesurfer.playPause();
+});
+
+wavesurfer.on('ready', () => {
+    wavesurfer.play();
+});
+
+wavesurfer.on('interaction', () => {
+    wavesurfer.playPause();
+});</script><div class="row pb-3"><div class="col-12"> <div class="card"><div class="card-header"> <p class="m-0">Bonobo - Black Sands - 10 - Stay The Same ft. Andreya Triana.mp3</p></div><div class="card-body"><div class="bonobo_10---stay-the-same-ft-andreya-trianamp3"></div></div><div class="card-footer"> <div style="display: flex; justify-content: space-around; align-items: center;"><button class="btn btn-primary bonobo_10---stay-the-same-ft-andreya-trianamp3">▷&#10074;&#10074;</button><label>Playback rate:&nbsp;<span id="rate">1.00</span>x</label><label>0.25x<input class="bonobo_10---stay-the-same-ft-andreya-trianamp3" type="range" min="0" max="4" step="1" value="1">4x</label><label><input class="bonobo_10---stay-the-same-ft-andreya-trianamp3" type="checkbox" checked>Preserve pitch</label></div></div></div></div></div><script type="module">// main.js (or equivalent entry point of your application)
+import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
+// YouTube video ID
+const audioUrl = "./media/audio/Bonobo%20-%20Black%20Sands/10%20-%20Stay%20The%20Same%20ft.%20Andreya%20Triana.mp3";
+const componentIdTagDiv = "div.bonobo_10---stay-the-same-ft-andreya-trianamp3";
+
+// Create the WaveSurfer instance
+const wavesurfer = WaveSurfer.create({
+    container: componentIdTagDiv,
+    waveColor: '#ffffff',
+    progressColor: '#000000',
+    cursorColor: '#000000',
+    cursorWidth: 1,
+    barWidth: 1,
+    barHeight: 1,
+    barGap: 1,
+    dragToSeek: true,
+    url: audioUrl,
+    backend: 'MediaElementWebAudio',
+    audioRate: 1,
+});
+
+let preservePitch = true;
+const speeds = [0.25, 0.5, 1, 2, 4];
+
+// Toggle pitch preservation
+document.querySelector('input[type="checkbox"].bonobo_10---stay-the-same-ft-andreya-trianamp3').addEventListener('change', (e) => {
+    preservePitch = e.target.checked;
+    wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
+});
+
+// Set the playback rate
+document.querySelector('input[type="range"].bonobo_10---stay-the-same-ft-andreya-trianamp3').addEventListener('input', (e) => {
+    const speed = speeds[e.target.valueAsNumber];
+    document.querySelector('#rate').textContent = speed.toFixed(2);
+    wavesurfer.setPlaybackRate(speed, preservePitch);
+    wavesurfer.play();
+});
+
+// Play/pause
+document.querySelector('.btn-primary.bonobo_10---stay-the-same-ft-andreya-trianamp3').addEventListener('click', () => {
+    wavesurfer.playPause();
+});
+
+wavesurfer.on('ready', () => {
+    wavesurfer.play();
+});
+
+wavesurfer.on('interaction', () => {
+    wavesurfer.playPause();
+});</script><div class="row pb-3"><div class="col-12"> <div class="card"><div class="card-header"> <p class="m-0">Bonobo - Black Sands - 11 - Animals.mp3</p></div><div class="card-body"><div class="bonobo_11---animalsmp3"></div></div><div class="card-footer"> <div style="display: flex; justify-content: space-around; align-items: center;"><button class="btn btn-primary bonobo_11---animalsmp3">▷&#10074;&#10074;</button><label>Playback rate:&nbsp;<span id="rate">1.00</span>x</label><label>0.25x<input class="bonobo_11---animalsmp3" type="range" min="0" max="4" step="1" value="1">4x</label><label><input class="bonobo_11---animalsmp3" type="checkbox" checked>Preserve pitch</label></div></div></div></div></div><script type="module">// main.js (or equivalent entry point of your application)
+import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
+// YouTube video ID
+const audioUrl = "./media/audio/Bonobo%20-%20Black%20Sands/11%20-%20Animals.mp3";
+const componentIdTagDiv = "div.bonobo_11---animalsmp3";
+
+// Create the WaveSurfer instance
+const wavesurfer = WaveSurfer.create({
+    container: componentIdTagDiv,
+    waveColor: '#ffffff',
+    progressColor: '#000000',
+    cursorColor: '#000000',
+    cursorWidth: 1,
+    barWidth: 1,
+    barHeight: 1,
+    barGap: 1,
+    dragToSeek: true,
+    url: audioUrl,
+    backend: 'MediaElementWebAudio',
+    audioRate: 1,
+});
+
+let preservePitch = true;
+const speeds = [0.25, 0.5, 1, 2, 4];
+
+// Toggle pitch preservation
+document.querySelector('input[type="checkbox"].bonobo_11---animalsmp3').addEventListener('change', (e) => {
+    preservePitch = e.target.checked;
+    wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
+});
+
+// Set the playback rate
+document.querySelector('input[type="range"].bonobo_11---animalsmp3').addEventListener('input', (e) => {
+    const speed = speeds[e.target.valueAsNumber];
+    document.querySelector('#rate').textContent = speed.toFixed(2);
+    wavesurfer.setPlaybackRate(speed, preservePitch);
+    wavesurfer.play();
+});
+
+// Play/pause
+document.querySelector('.btn-primary.bonobo_11---animalsmp3').addEventListener('click', () => {
+    wavesurfer.playPause();
+});
+
+wavesurfer.on('ready', () => {
+    wavesurfer.play();
+});
+
+wavesurfer.on('interaction', () => {
+    wavesurfer.playPause();
+});</script><div class="row pb-3"><div class="col-12"> <div class="card"><div class="card-header"> <p class="m-0">Bonobo - Black Sands - 12 - Black Sands.mp3</p></div><div class="card-body"><div class="bonobo_12---black-sandsmp3"></div></div><div class="card-footer"> <div style="display: flex; justify-content: space-around; align-items: center;"><button class="btn btn-primary bonobo_12---black-sandsmp3">▷&#10074;&#10074;</button><label>Playback rate:&nbsp;<span id="rate">1.00</span>x</label><label>0.25x<input class="bonobo_12---black-sandsmp3" type="range" min="0" max="4" step="1" value="1">4x</label><label><input class="bonobo_12---black-sandsmp3" type="checkbox" checked>Preserve pitch</label></div></div></div></div></div><script type="module">// main.js (or equivalent entry point of your application)
+import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
+// YouTube video ID
+const audioUrl = "./media/audio/Bonobo%20-%20Black%20Sands/12%20-%20Black%20Sands.mp3";
+const componentIdTagDiv = "div.bonobo_12---black-sandsmp3";
+
+// Create the WaveSurfer instance
+const wavesurfer = WaveSurfer.create({
+    container: componentIdTagDiv,
+    waveColor: '#ffffff',
+    progressColor: '#000000',
+    cursorColor: '#000000',
+    cursorWidth: 1,
+    barWidth: 1,
+    barHeight: 1,
+    barGap: 1,
+    dragToSeek: true,
+    url: audioUrl,
+    backend: 'MediaElementWebAudio',
+    audioRate: 1,
+});
+
+let preservePitch = true;
+const speeds = [0.25, 0.5, 1, 2, 4];
+
+// Toggle pitch preservation
+document.querySelector('input[type="checkbox"].bonobo_12---black-sandsmp3').addEventListener('change', (e) => {
+    preservePitch = e.target.checked;
+    wavesurfer.setPlaybackRate(wavesurfer.getPlaybackRate(), preservePitch);
+});
+
+// Set the playback rate
+document.querySelector('input[type="range"].bonobo_12---black-sandsmp3').addEventListener('input', (e) => {
+    const speed = speeds[e.target.valueAsNumber];
+    document.querySelector('#rate').textContent = speed.toFixed(2);
+    wavesurfer.setPlaybackRate(speed, preservePitch);
+    wavesurfer.play();
+});
+
+// Play/pause
+document.querySelector('.btn-primary.bonobo_12---black-sandsmp3').addEventListener('click', () => {
+    wavesurfer.playPause();
+});
+
+wavesurfer.on('ready', () => {
+    wavesurfer.play();
+});
+
+wavesurfer.on('interaction', () => {
+    wavesurfer.playPause();
 });</script></div></main><footer class="footer mt-auto py-3"><div class="container text-center"><p class="my-0">© 2024 fullbl00m.github.io. All rights reserved.</p></div></footer><div class="loading-splash d-none"></div></body></html>
