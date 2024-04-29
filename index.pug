@@ -16,14 +16,14 @@ html(lang="en")
             h1.p-5.text-center
               | I CAN BUILD ANYTHING WITH ANYTHING.<br>
               | FUCKING TRY ME, ASSHOLE
-        .row 
+        .row.pb-3
             .col-12 
                 .card 
                     .card-body 
                         #waveform
 
-      include components/four-two-one-cards/four-two-one-cards
-      +four-two-one-cards
+        include components/four-two-one-cards/four-two-one-cards
+        +four-two-one-cards
 
       script(type="module").
         import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js'
