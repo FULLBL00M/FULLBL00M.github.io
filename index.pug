@@ -25,31 +25,37 @@ html(lang="en")
         include components/four-two-one-cards/four-two-one-cards
         +four-two-one-cards
 
-      script(type="module").
+    include components/footer/footer
+    +footer
+    .loading-splash.d-none
+
+    script(type="module").
         import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js'
         // YouTube video ID
         const audioUrl = `./media/audio/Fingerbib.mp3`;
 
         // Create the WaveSurfer instance
         const wavesurfer = WaveSurfer.create({
-          container: '#waveform',
-          waveColor: '#ffffff',
-          progressColor: '#383351',
-          url: audioUrl,
-          backend: 'MediaElementWebAudio',
+            container: '#waveform',
+            waveColor: '#ffffff',
+            progressColor: '#000000',
+            cursorColor: '#000000',
+            cursorWidth: 1,
+            barWidth: 1,
+            barHeight: 0.6,
+            dragToSeek: true,
+            url: audioUrl,
+            backend: 'MediaElementWebAudio',
         });
 
         wavesurfer.on('ready', () => {
-          wavesurfer.play();
+            wavesurfer.play();
         });
 
         wavesurfer.on('interaction', () => {
-          wavesurfer.playPause();
+            wavesurfer.playPause();
         });
 
-    include components/footer/footer
-    +footer
-    .loading-splash.d-none
         //- #stars
         //- #stars2
         //- #stars3
