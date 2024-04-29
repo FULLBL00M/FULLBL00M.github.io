@@ -9,7 +9,7 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
                 .card-header 
                     p.m-0 #{artist_name} - #{album_name} - #{file_name}
                 .card-body
-                    div(class=component_id_tag)
+                    div(class=`${component_id_tag}`)
                 .card-footer 
                     div(style="display: flex; justify-content: space-around; align-items: center;")
                         button(class=`btn btn-primary ${component_id_tag}`)
@@ -20,7 +20,7 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url })
                             | x
                         label
                             | 0.25x
-                            input(class=component_id_tag type="range" min="0" max="4" step="1" value="1")
+                            input(class=`${component_id_tag}` type="range" min="0" max="4" step="1" value="1")
                             | 4x
                         label
                             input(type="checkbox" checked)
