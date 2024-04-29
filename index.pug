@@ -27,15 +27,15 @@ html(lang="en")
                                 | Play/pause
 
                             label
-                                | Playback rate:
+                                | Playback rate:&nbsp;
                                 span#rate 1.00
                                 | x
 
                             label
-                                | 0.10x
-                                input(type="range" min="0.00" max="4.00" step="0.1" value="1.00")
+                                | 0.25x
+                                input(type="range" min="0" max="4" step="1" value="1")
 
-                                | 4.00x
+                                | 4x
 
                             label
                                 input(type="checkbox" checked)
@@ -70,14 +70,7 @@ html(lang="en")
         });
 
         let preservePitch = true;
-        
-        var speeds = [];
-        var x = 0;
-        while (x <= 4) {
-            x = x + 0.1;
-            speeds.push(x);
-        }
-        console.log(speeds);
+        const speeds = [0.25, 0.5, 1, 2, 4];
 
         // Toggle pitch preservation
         document.querySelector('input[type="checkbox"]').addEventListener('change', (e) => {
@@ -94,7 +87,7 @@ html(lang="en")
         })
 
         // Play/pause
-        document.querySelector('.btn-primary').addEventListener('click', () => {
+        document.querySelector('button').addEventListener('click', () => {
             wavesurfer.playPause();
         })
 
