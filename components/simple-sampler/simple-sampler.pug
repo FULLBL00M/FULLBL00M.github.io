@@ -53,7 +53,7 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url, accent_col
         });
 
         // Create some regions at specific time ranges
-        ws.on('decode', () => {
+        wavesurfer.on('decode', () => {
             // Regions
             wsRegions.addRegion({
                 start: 0,
