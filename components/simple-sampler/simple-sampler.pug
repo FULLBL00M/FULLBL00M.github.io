@@ -9,7 +9,7 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url, accent_col
                 .card-header 
                     div(class="d-flex flex-row justify-content-between align-items-center")
                         p.m-0 <b>#{artist_name}</b> - #{album_name} <br> 
-                        p 
+                        p.m-0 
                             small #{file_name}
                         div(style="display: flex; justify-content: space-around; align-items: center;")
                             button(class=`btn btn-primary ${component_id_tag}`)
