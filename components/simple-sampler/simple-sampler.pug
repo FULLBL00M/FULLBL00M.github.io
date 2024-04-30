@@ -62,14 +62,14 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url, accent_col
                 start: 0,
                 end: 8,
                 content: 'Resize me',
-                color: randomColor(),
-                drag: false,
+                color: "#ffffff",
+                drag: true,
                 resize: true,
             })
         })
 
         wavesurferRegions.enableDragSelection({
-            color: 'rgba(255, 0, 0, 0.1)',
+            color: 'rgba(255, 255, 255, 0.1)',
         })
 
         wavesurferRegions.on('region-updated', (region) => {
