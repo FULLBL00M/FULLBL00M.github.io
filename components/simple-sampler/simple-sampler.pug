@@ -52,10 +52,13 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url, accent_col
             audioRate: 1,
         });
 
+        // Initialize the Regions plugin
+        const wavesurferRegions = wavesurfer.registerPlugin(RegionsPlugin.create())
+
         // Create some regions at specific time ranges
         wavesurfer.on('decode', () => {
             // Regions
-            wsRegions.addRegion({
+            wavesurferRegions.addRegion({
                 start: 0,
                 end: 8,
                 content: 'Resize me',
@@ -65,11 +68,11 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url, accent_col
             })
         })
 
-        wsRegions.enableDragSelection({
+        wavesurfersRegions.enableDragSelection({
             color: 'rgba(255, 0, 0, 0.1)',
         })
 
-        wsRegions.on('region-updated', (region) => {
+        wavesurfersRegions.on('region-updated', (region) => {
             console.log('Updated region', region)
         })
 
