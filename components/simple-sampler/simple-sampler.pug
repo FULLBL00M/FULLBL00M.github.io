@@ -30,7 +30,7 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url, accent_col
 
     script(type="module").
         import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
-        import RegionsPlugin from 'wavesurfer.js/dist/plugins/regions.esm.js';
+        import RegionsPlugin from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/plugins/regions.esm.js';
 
         const audioUrl = "#{audio_url}";
         const componentIdTagDiv = "div.#{component_id_tag}";
