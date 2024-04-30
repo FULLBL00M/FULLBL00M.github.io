@@ -62,19 +62,54 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url, accent_col
                 start: 0,
                 end: 8,
                 content: 'Resize me',
-                color: "#ffffff",
+                color: "rgba(255, 255, 255, 0.1)",
                 drag: true,
                 resize: true,
             })
         })
 
         wavesurferRegions.enableDragSelection({
-            color: 'rgba(255, 255, 255, 0.1)',
+            color: '#ffffff',
         })
 
         wavesurferRegions.on('region-updated', (region) => {
             console.log('Updated region', region)
         })
+
+        // Loop a region on click
+        let loop = true
+        //- // Toggle looping with a checkbox
+        //- document.querySelector('input[type="checkbox"]').onclick = (e) => {
+        //-     loop = e.target.checked
+        //- }
+
+        {
+            let activeRegion = null
+            wavesurferRegions.on('region-in', (region) => {
+                console.log('region-in', region)
+                activeRegion = region
+            })
+            wavesurferRegions.on('region-out', (region) => {
+                console.log('region-out', region)
+                if (activeRegion === region) {
+                    if (loop) {
+                        region.play()
+                    } else {
+                        activeRegion = null
+                    }
+                }
+            })
+            wavesurferRegions.on('region-clicked', (region, e) => {
+                e.stopPropagation() // prevent triggering a click on the waveform
+                activeRegion = region
+                region.play()
+                //region.setOptions({ color: randomColor() })
+            })
+            // Reset the active region when the user clicks anywhere in the waveform
+            wavesurfer.on('interaction', () => {
+                    activeRegion = null
+            })
+        }
 
 
         //- let preservePitch = true;
