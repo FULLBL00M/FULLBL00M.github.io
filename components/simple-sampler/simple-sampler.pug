@@ -30,7 +30,8 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url, accent_col
 
     script(type="module").
         import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
-        // YouTube video ID
+        import RegionsPlugin from 'wavesurfer.js/dist/plugins/regions.esm.js';
+
         const audioUrl = "#{audio_url}";
         const componentIdTagDiv = "div.#{component_id_tag}";
         const accentColor = "#{accent_color}"
@@ -50,6 +51,28 @@ mixin simple-sampler({ artist_name, album_name, file_name, audio_url, accent_col
             backend: 'MediaElementWebAudio',
             audioRate: 1,
         });
+
+        // Create some regions at specific time ranges
+        ws.on('decode', () => {
+            // Regions
+            wsRegions.addRegion({
+                start: 0,
+                end: 8,
+                content: 'Resize me',
+                color: randomColor(),
+                drag: false,
+                resize: true,
+            })
+        })
+
+        wsRegions.enableDragSelection({
+            color: 'rgba(255, 0, 0, 0.1)',
+        })
+
+        wsRegions.on('region-updated', (region) => {
+            console.log('Updated region', region)
+        })
+
 
         //- let preservePitch = true;
         //- const speeds = [0.25, 0.5, 1, 2, 4];
